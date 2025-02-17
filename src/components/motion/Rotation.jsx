@@ -12,7 +12,7 @@ export default function Rotation({ comp_id }) {
   };
 
   return (
-    <div className="moveX">
+    <div className="moveX" id={comp_id} draggable>
       <span>Rotate by: </span>
       <input type="number" value={change} onChange={handleChange} />
       <span>degree</span>

@@ -12,7 +12,7 @@ export default function Move({ comp_id }) {
   };
 
   return (
-    <div className="moveX">
+    <div className="moveX" id={comp_id} draggable>
       <span>Move X</span>
       <input type="number" value={change} onChange={handleChange} />
       <span>steps</span>

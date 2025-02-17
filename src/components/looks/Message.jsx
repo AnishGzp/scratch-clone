@@ -20,7 +20,7 @@ export default function Message({ comp_id }) {
   };
 
   return (
-    <div className="message">
+    <div className="message" id={comp_id}>
       <div className="message_container">
         <span>Message</span>
         <input type="text" value={change} onChange={handleChange} />

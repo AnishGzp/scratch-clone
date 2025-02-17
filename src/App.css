@@ -62,58 +62,6 @@ body {
           display: flex;
           flex-direction: column;
           gap: 10px;
-
-          /* Components CSS */
-
-          .moveX {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            background-color: #1d4ed8;
-            color: white;
-            padding: 10px;
-            border-radius: 8px;
-          }
-          .moveY {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            background-color: #3f51b5;
-            color: white;
-            padding: 10px;
-            border-radius: 8px;
-          }
-
-          /* Looks */
-          .message {
-            background-color: #6b27d9;
-            padding: 10px;
-            border-radius: 8px;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-
-            .message_container {
-              display: flex;
-              gap: 10px;
-
-              input {
-                width: auto;
-              }
-            }
-          }
-
-          /* Event */
-          .event {
-            background-color: #fabd23;
-
-            button {
-              background-color: #d97707;
-            }
-          }
         }
       }
     }
@@ -162,8 +110,50 @@ body {
     padding: 10px;
     background: #fff;
 
+    .midbar_heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      .button {
+        background-color: #6b27d9;
+        padding: 10px 15px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
     .task_container {
       display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      .task_content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        width: 40%;
+        background-color: #55555564;
+        border-radius: 8px;
+        padding: 5px;
+
+        button {
+          width: fit-content;
+          padding: 10px 15px;
+          border-radius: 8px;
+        }
+      }
     }
 
     .message {
@@ -212,4 +202,66 @@ button {
     cursor: pointer;
     opacity: 0.885;
   }
+}
+
+/* Components CSS */
+
+.moveX {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #1d4ed8;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: grab;
+  width: 100%;
+}
+.moveY {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #3f51b5;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  cursor: grab;
+}
+
+/* Looks */
+.message {
+  background-color: #6b27d9;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  cursor: grab;
+
+  .message_container {
+    display: flex;
+    gap: 10px;
+
+    input {
+      width: auto;
+    }
+  }
+}
+
+/* Event */
+.event {
+  background-color: #fabd23;
+
+  button {
+    background-color: #d97707;
+  }
+}
+
+.moveX:active {
+  border: 1px solid black;
 }

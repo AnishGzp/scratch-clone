@@ -13,8 +13,6 @@ export default function Preview() {
   const think = useSelector((state) => state.looks.think);
   const size = useSelector((state) => state.looks.size);
 
-  console.log(displayMessage);
-
   const dispatch = useDispatch();
 
   const sprite_container_styles = {

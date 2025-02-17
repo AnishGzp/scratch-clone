@@ -17,7 +17,7 @@ export default function Size({ comp_id }) {
   };
 
   return (
-    <div className="message">
+    <div className="message" id={comp_id}>
       <div className="message_container">
         <span>Size</span>
         <input type="number" value={size} onChange={handleChange} />

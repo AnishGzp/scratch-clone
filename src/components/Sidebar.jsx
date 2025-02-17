@@ -18,7 +18,7 @@ export default function Sidebar() {
             <div className="motion_heading">{title}</div>
             {components.map((x, i) => (
               <div className="motion_control" key={i}>
-                {getComponent(x, `${id}-${x}`)}
+                {getComponent(x, x)}
               </div>
             ))}
           </div>
